@@ -1,0 +1,29 @@
+{
+  "id": "/",
+  "name": "Learning Journal PWA",
+  "short_name": "LearningPWA",
+  "description": "A progressive web app for capturing weekly reflections and projects.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1976d2",
+  "orientation": "portrait-primary",
+  "categories": ["education", "productivity", "journal"],
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "display_override": ["standalone", "browser"],
+  "prefer_related_applications": false
+}

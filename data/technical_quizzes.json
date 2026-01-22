@@ -1,0 +1,424 @@
+{
+  "technicalQuizzes": [
+    {
+      "id": "tq001",
+      "question": "What does HTML stand for?",
+      "options": [
+        "Hyper Text Markup Language",
+        "High Tech Modern Language",
+        "Home Tool Markup Language",
+        "Hyperlinks and Text Markup Language"
+      ],
+      "correctAnswer": 0,
+      "category": "Web Development",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq002",
+      "question": "Which CSS property controls the text size?",
+      "options": [
+        "font-style",
+        "text-size",
+        "font-size",
+        "text-style"
+      ],
+      "correctAnswer": 2,
+      "category": "CSS",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq003",
+      "question": "Which JavaScript method converts JSON to an object?",
+      "options": [
+        "JSON.convert()",
+        "JSON.stringify()",
+        "JSON.parse()",
+        "JSON.object()"
+      ],
+      "correctAnswer": 2,
+      "category": "JavaScript",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq004",
+      "question": "What HTTP status code means \"Not Found\"?",
+      "options": [
+        "200",
+        "301",
+        "404",
+        "500"
+      ],
+      "correctAnswer": 2,
+      "category": "HTTP",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq005",
+      "question": "Which tag is used for including JavaScript in HTML?",
+      "options": [
+        "<script>",
+        "<javascript>",
+        "<js>",
+        "<code>"
+      ],
+      "correctAnswer": 0,
+      "category": "Web Development",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq006",
+      "question": "What does CSS stand for?",
+      "options": [
+        "Computer Style Sheets",
+        "Cascading Style Sheets",
+        "Creative Style System",
+        "Colorful Style Sheets"
+      ],
+      "correctAnswer": 1,
+      "category": "CSS",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq007",
+      "question": "Which method is used to add an element to the end of an array in JavaScript?",
+      "options": [
+        "push()",
+        "pop()",
+        "shift()",
+        "unshift()"
+      ],
+      "correctAnswer": 0,
+      "category": "JavaScript",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq008",
+      "question": "What is the purpose of the <meta> tag in HTML?",
+      "options": [
+        "To create metadata about the HTML document",
+        "To add images",
+        "To create links",
+        "To add scripts"
+      ],
+      "correctAnswer": 0,
+      "category": "Web Development",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq009",
+      "question": "Which CSS property is used to make text bold?",
+      "options": [
+        "text-weight",
+        "font-weight",
+        "bold",
+        "text-bold"
+      ],
+      "correctAnswer": 1,
+      "category": "CSS",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq010",
+      "question": "What is the result of typeof null in JavaScript?",
+      "options": [
+        "null",
+        "undefined",
+        "object",
+        "number"
+      ],
+      "correctAnswer": 2,
+      "category": "JavaScript",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq011",
+      "question": "Which HTTP method is used to retrieve data?",
+      "options": [
+        "POST",
+        "GET",
+        "PUT",
+        "DELETE"
+      ],
+      "correctAnswer": 1,
+      "category": "HTTP",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq012",
+      "question": "What does API stand for?",
+      "options": [
+        "Application Programming Interface",
+        "Automated Program Integration",
+        "Advanced Programming Interface",
+        "Application Process Integration"
+      ],
+      "correctAnswer": 0,
+      "category": "Web Development",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq013",
+      "question": "Which CSS property is used to change the background color?",
+      "options": [
+        "color",
+        "bg-color",
+        "background-color",
+        "background"
+      ],
+      "correctAnswer": 2,
+      "category": "CSS",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq014",
+      "question": "What is the correct way to declare a variable in JavaScript ES6?",
+      "options": [
+        "var x = 5",
+        "let x = 5",
+        "variable x = 5",
+        "Both var and let"
+      ],
+      "correctAnswer": 3,
+      "category": "JavaScript",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq015",
+      "question": "What does REST stand for?",
+      "options": [
+        "Representational State Transfer",
+        "Remote State Transfer",
+        "Resource State Transfer",
+        "Representative State Transfer"
+      ],
+      "correctAnswer": 0,
+      "category": "Web Development",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq016",
+      "question": "Which HTML5 element is used for navigation?",
+      "options": [
+        "<nav>",
+        "<navigation>",
+        "<menu>",
+        "<link>"
+      ],
+      "correctAnswer": 0,
+      "category": "Web Development",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq017",
+      "question": "What is the purpose of localStorage in JavaScript?",
+      "options": [
+        "To store data temporarily",
+        "To store data permanently in the browser",
+        "To store data on the server",
+        "To store data in cookies"
+      ],
+      "correctAnswer": 1,
+      "category": "JavaScript",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq018",
+      "question": "Which CSS property is used for flexbox layout?",
+      "options": [
+        "display: flex",
+        "layout: flex",
+        "flex: display",
+        "display: flexbox"
+      ],
+      "correctAnswer": 0,
+      "category": "CSS",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq019",
+      "question": "What is a closure in JavaScript?",
+      "options": [
+        "A function that has access to variables in its outer scope",
+        "A way to close a browser tab",
+        "A method to hide code",
+        "A type of loop"
+      ],
+      "correctAnswer": 0,
+      "category": "JavaScript",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq020",
+      "question": "Which HTTP status code means \"OK\"?",
+      "options": [
+        "200",
+        "201",
+        "300",
+        "400"
+      ],
+      "correctAnswer": 0,
+      "category": "HTTP",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq021",
+      "question": "What is the purpose of the async keyword in JavaScript?",
+      "options": [
+        "To make a function synchronous",
+        "To make a function asynchronous",
+        "To prevent errors",
+        "To optimize performance"
+      ],
+      "correctAnswer": 1,
+      "category": "JavaScript",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq022",
+      "question": "Which CSS property is used to create rounded corners?",
+      "options": [
+        "border-round",
+        "corner-radius",
+        "border-radius",
+        "round-corners"
+      ],
+      "correctAnswer": 2,
+      "category": "CSS",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq023",
+      "question": "What is the difference between == and === in JavaScript?",
+      "options": [
+        "== checks value, === checks value and type",
+        "=== checks value, == checks value and type",
+        "They are the same",
+        "== is faster"
+      ],
+      "correctAnswer": 0,
+      "category": "JavaScript",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq024",
+      "question": "Which HTML element is used for the largest heading?",
+      "options": [
+        "<h6>",
+        "<h1>",
+        "<head>",
+        "<header>"
+      ],
+      "correctAnswer": 1,
+      "category": "Web Development",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq025",
+      "question": "What does DOM stand for?",
+      "options": [
+        "Document Object Model",
+        "Data Object Model",
+        "Document Order Model",
+        "Dynamic Object Model"
+      ],
+      "correctAnswer": 0,
+      "category": "Web Development",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq026",
+      "question": "Which method is used to select an element by ID in JavaScript?",
+      "options": [
+        "getElementById()",
+        "getElementByClass()",
+        "selectById()",
+        "findById()"
+      ],
+      "correctAnswer": 0,
+      "category": "JavaScript",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq027",
+      "question": "What is the purpose of the <alt> attribute in an <img> tag?",
+      "options": [
+        "To add a title",
+        "To provide alternative text for the image",
+        "To set the image size",
+        "To add a link"
+      ],
+      "correctAnswer": 1,
+      "category": "Web Development",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq028",
+      "question": "Which CSS property is used to add space between elements?",
+      "options": [
+        "spacing",
+        "margin",
+        "padding",
+        "Both margin and padding"
+      ],
+      "correctAnswer": 3,
+      "category": "CSS",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq029",
+      "question": "What is a Promise in JavaScript?",
+      "options": [
+        "A guarantee that code will run",
+        "An object representing eventual completion of an async operation",
+        "A type of variable",
+        "A way to prevent errors"
+      ],
+      "correctAnswer": 1,
+      "category": "JavaScript",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "tq030",
+      "question": "Which HTTP method is used to update data?",
+      "options": [
+        "GET",
+        "POST",
+        "PUT",
+        "FETCH"
+      ],
+      "correctAnswer": 2,
+      "category": "HTTP",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    }
+  ]
+}

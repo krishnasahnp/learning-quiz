@@ -1,0 +1,229 @@
+{
+  "memoryMatch": [
+    {
+      "id": "mm001",
+      "pairs": [
+        { "pairId": 1, "content": "HTML", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 1, "content": "HTML", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "CSS", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "CSS", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "JS", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "JS", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "PWA", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "PWA", "imageUrl": "/static/images/logo.png", "type": "text" }
+      ],
+      "difficulty": "easy",
+      "category": "Web Basics"
+    },
+    {
+      "id": "mm002",
+      "pairs": [
+        { "pairId": 1, "content": "React", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 1, "content": "React", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Vue", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Vue", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Angular", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Angular", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Svelte", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Svelte", "imageUrl": "/static/images/logo.png", "type": "text" }
+      ],
+      "difficulty": "medium",
+      "category": "Frontend Frameworks"
+    },
+    {
+      "id": "mm003",
+      "pairs": [
+        { "pairId": 1, "content": "Node", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 1, "content": "Node", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Python", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Python", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Java", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Java", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Go", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Go", "imageUrl": "/static/images/logo.png", "type": "text" }
+      ],
+      "difficulty": "medium",
+      "category": "Backend Languages"
+    },
+    {
+      "id": "mm004",
+      "pairs": [
+        { "pairId": 1, "content": "API", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 1, "content": "API", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "REST", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "REST", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "GraphQL", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "GraphQL", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "JSON", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "JSON", "imageUrl": "/static/images/logo.png", "type": "text" }
+      ],
+      "difficulty": "medium",
+      "category": "API Technologies"
+    },
+    {
+      "id": "mm005",
+      "pairs": [
+        { "pairId": 1, "content": "Git", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 1, "content": "Git", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "GitHub", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "GitHub", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Docker", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Docker", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Kubernetes", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Kubernetes", "imageUrl": "/static/images/logo.png", "type": "text" }
+      ],
+      "difficulty": "hard",
+      "category": "DevOps Tools"
+    },
+    {
+      "id": "mm006",
+      "pairs": [
+        { "pairId": 1, "content": "MySQL", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 1, "content": "MySQL", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "MongoDB", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "MongoDB", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "PostgreSQL", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "PostgreSQL", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Redis", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Redis", "imageUrl": "/static/images/logo.png", "type": "text" }
+      ],
+      "difficulty": "medium",
+      "category": "Databases"
+    },
+    {
+      "id": "mm007",
+      "pairs": [
+        { "pairId": 1, "content": "AWS", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 1, "content": "AWS", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Azure", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Azure", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "GCP", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "GCP", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Vercel", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Vercel", "imageUrl": "/static/images/logo.png", "type": "text" }
+      ],
+      "difficulty": "medium",
+      "category": "Cloud Platforms"
+    },
+    {
+      "id": "mm008",
+      "pairs": [
+        { "pairId": 1, "content": "TypeScript", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 1, "content": "TypeScript", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "JavaScript", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "JavaScript", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Dart", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Dart", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Swift", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Swift", "imageUrl": "/static/images/logo.png", "type": "text" }
+      ],
+      "difficulty": "medium",
+      "category": "Programming Languages"
+    },
+    {
+      "id": "mm009",
+      "pairs": [
+        { "pairId": 1, "content": "Flutter", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 1, "content": "Flutter", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "React Native", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "React Native", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Ionic", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Ionic", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Xamarin", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Xamarin", "imageUrl": "/static/images/logo.png", "type": "text" }
+      ],
+      "difficulty": "medium",
+      "category": "Mobile Frameworks"
+    },
+    {
+      "id": "mm010",
+      "pairs": [
+        { "pairId": 1, "content": "Webpack", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 1, "content": "Webpack", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Vite", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Vite", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Parcel", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Parcel", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Rollup", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Rollup", "imageUrl": "/static/images/logo.png", "type": "text" }
+      ],
+      "difficulty": "medium",
+      "category": "Build Tools"
+    },
+    {
+      "id": "mm011",
+      "pairs": [
+        { "pairId": 1, "content": "Jest", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 1, "content": "Jest", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Mocha", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Mocha", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Cypress", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Cypress", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Selenium", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Selenium", "imageUrl": "/static/images/logo.png", "type": "text" }
+      ],
+      "difficulty": "medium",
+      "category": "Testing Tools"
+    },
+    {
+      "id": "mm012",
+      "pairs": [
+        { "pairId": 1, "content": "Tailwind", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 1, "content": "Tailwind", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Bootstrap", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Bootstrap", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Material UI", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Material UI", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Bulma", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Bulma", "imageUrl": "/static/images/logo.png", "type": "text" }
+      ],
+      "difficulty": "easy",
+      "category": "CSS Frameworks"
+    },
+    {
+      "id": "mm013",
+      "pairs": [
+        { "pairId": 1, "content": "NPM", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 1, "content": "NPM", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Yarn", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Yarn", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "PNPM", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "PNPM", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Bun", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Bun", "imageUrl": "/static/images/logo.png", "type": "text" }
+      ],
+      "difficulty": "easy",
+      "category": "Package Managers"
+    },
+    {
+      "id": "mm014",
+      "pairs": [
+        { "pairId": 1, "content": "Firebase", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 1, "content": "Firebase", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Supabase", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Supabase", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Appwrite", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Appwrite", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "MongoDB Atlas", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "MongoDB Atlas", "imageUrl": "/static/images/logo.png", "type": "text" }
+      ],
+      "difficulty": "medium",
+      "category": "Backend Services"
+    },
+    {
+      "id": "mm015",
+      "pairs": [
+        { "pairId": 1, "content": "Next.js", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 1, "content": "Next.js", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Nuxt", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 2, "content": "Nuxt", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Gatsby", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 3, "content": "Gatsby", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Remix", "imageUrl": "/static/images/logo.png", "type": "text" },
+        { "pairId": 4, "content": "Remix", "imageUrl": "/static/images/logo.png", "type": "text" }
+      ],
+      "difficulty": "medium",
+      "category": "Full-Stack Frameworks"
+    }
+  ]
+}

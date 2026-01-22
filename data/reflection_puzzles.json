@@ -1,0 +1,638 @@
+{
+  "reflectionPuzzle": [
+    {
+      "id": "rp001",
+      "puzzleType": "pattern-completion",
+      "question": "Complete the pattern",
+      "canvasData": {
+        "grid": "3x3",
+        "shapes": [
+          { "type": "circle", "x": 30, "y": 30, "r": 12, "color": "#4A90E2" },
+          { "type": "square", "x": 60, "y": 60, "size": 18, "color": "#FF6B35" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "c",
+      "explanation": "The pattern continues clockwise with alternating shapes.",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp002",
+      "puzzleType": "symmetry",
+      "question": "Select the mirror image",
+      "canvasData": {
+        "grid": "2x2",
+        "shapes": [
+          { "type": "triangle", "x": 40, "y": 40, "size": 20, "color": "#2ECC71" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "b",
+      "explanation": "Option B is the correct mirror along the vertical axis.",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp003",
+      "puzzleType": "rotation",
+      "question": "Which shape completes the rotation sequence?",
+      "canvasData": {
+        "grid": "3x3",
+        "shapes": [
+          { "type": "circle", "x": 50, "y": 50, "r": 15, "color": "#9B59B6" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "a",
+      "explanation": "The shape rotates 90 degrees clockwise.",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp004",
+      "puzzleType": "sequence",
+      "question": "What comes next in the sequence?",
+      "canvasData": {
+        "grid": "4x4",
+        "shapes": [
+          { "type": "square", "x": 25, "y": 25, "size": 20, "color": "#E74C3C" },
+          { "type": "circle", "x": 75, "y": 75, "r": 10, "color": "#3498DB" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "d",
+      "explanation": "The pattern alternates between square and circle.",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp005",
+      "puzzleType": "color-pattern",
+      "question": "Identify the color pattern",
+      "canvasData": {
+        "grid": "3x3",
+        "shapes": [
+          { "type": "circle", "x": 40, "y": 40, "r": 18, "color": "#F39C12" },
+          { "type": "square", "x": 80, "y": 80, "size": 16, "color": "#16A085" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "b",
+      "explanation": "Colors follow a gradient pattern.",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp006",
+      "puzzleType": "spatial",
+      "question": "Which arrangement matches the pattern?",
+      "canvasData": {
+        "grid": "2x2",
+        "shapes": [
+          { "type": "triangle", "x": 30, "y": 30, "size": 25, "color": "#E67E22" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "c",
+      "explanation": "Spatial arrangement follows diagonal pattern.",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp007",
+      "puzzleType": "pattern-completion",
+      "question": "Complete the visual pattern",
+      "canvasData": {
+        "grid": "3x3",
+        "shapes": [
+          { "type": "circle", "x": 50, "y": 50, "r": 14, "color": "#8E44AD" },
+          { "type": "square", "x": 100, "y": 100, "size": 22, "color": "#C0392B" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "a",
+      "explanation": "Pattern follows geometric progression.",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp008",
+      "puzzleType": "symmetry",
+      "question": "Find the symmetrical match",
+      "canvasData": {
+        "grid": "4x4",
+        "shapes": [
+          { "type": "triangle", "x": 40, "y": 40, "size": 20, "color": "#27AE60" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "d",
+      "explanation": "Symmetry along horizontal axis.",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp009",
+      "puzzleType": "rotation",
+      "question": "Which rotation completes the pattern?",
+      "canvasData": {
+        "grid": "3x3",
+        "shapes": [
+          { "type": "square", "x": 45, "y": 45, "size": 24, "color": "#2980B9" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "b",
+      "explanation": "180 degree rotation completes the sequence.",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp010",
+      "puzzleType": "sequence",
+      "question": "What is the next element?",
+      "canvasData": {
+        "grid": "2x2",
+        "shapes": [
+          { "type": "circle", "x": 35, "y": 35, "r": 16, "color": "#D35400" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "c",
+      "explanation": "Sequence follows Fibonacci pattern.",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp011",
+      "puzzleType": "pattern-completion",
+      "question": "Complete the missing pattern",
+      "canvasData": {
+        "grid": "3x3",
+        "shapes": [
+          { "type": "triangle", "x": 50, "y": 50, "size": 18, "color": "#1ABC9C" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "a",
+      "explanation": "Pattern follows clockwise rotation.",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp012",
+      "puzzleType": "symmetry",
+      "question": "Identify the mirror reflection",
+      "canvasData": {
+        "grid": "4x4",
+        "shapes": [
+          { "type": "square", "x": 60, "y": 60, "size": 20, "color": "#34495E" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "d",
+      "explanation": "Vertical mirror reflection.",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp013",
+      "puzzleType": "rotation",
+      "question": "Which rotation angle is correct?",
+      "canvasData": {
+        "grid": "3x3",
+        "shapes": [
+          { "type": "circle", "x": 40, "y": 40, "r": 12, "color": "#E91E63" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "b",
+      "explanation": "45 degree rotation matches pattern.",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp014",
+      "puzzleType": "sequence",
+      "question": "Continue the sequence",
+      "canvasData": {
+        "grid": "2x2",
+        "shapes": [
+          { "type": "triangle", "x": 30, "y": 30, "size": 22, "color": "#00BCD4" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "c",
+      "explanation": "Sequence increases by factor of 2.",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp015",
+      "puzzleType": "color-pattern",
+      "question": "Match the color sequence",
+      "canvasData": {
+        "grid": "3x3",
+        "shapes": [
+          { "type": "square", "x": 50, "y": 50, "size": 18, "color": "#FF5722" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "a",
+      "explanation": "Colors follow RGB progression.",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp016",
+      "puzzleType": "spatial",
+      "question": "Which spatial arrangement fits?",
+      "canvasData": {
+        "grid": "4x4",
+        "shapes": [
+          { "type": "circle", "x": 45, "y": 45, "r": 14, "color": "#795548" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "d",
+      "explanation": "Spatial pattern follows grid layout.",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp017",
+      "puzzleType": "pattern-completion",
+      "question": "Fill in the missing pattern",
+      "canvasData": {
+        "grid": "3x3",
+        "shapes": [
+          { "type": "triangle", "x": 40, "y": 40, "size": 20, "color": "#607D8B" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "b",
+      "explanation": "Pattern completes diagonal sequence.",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp018",
+      "puzzleType": "symmetry",
+      "question": "Select the correct symmetry",
+      "canvasData": {
+        "grid": "2x2",
+        "shapes": [
+          { "type": "square", "x": 35, "y": 35, "size": 26, "color": "#9C27B0" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "c",
+      "explanation": "Radial symmetry around center.",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp019",
+      "puzzleType": "rotation",
+      "question": "Complete the rotation pattern",
+      "canvasData": {
+        "grid": "3x3",
+        "shapes": [
+          { "type": "circle", "x": 50, "y": 50, "r": 16, "color": "#009688" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "a",
+      "explanation": "270 degree counter-clockwise rotation.",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp020",
+      "puzzleType": "sequence",
+      "question": "What follows in the pattern?",
+      "canvasData": {
+        "grid": "4x4",
+        "shapes": [
+          { "type": "triangle", "x": 55, "y": 55, "size": 19, "color": "#FF9800" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "d",
+      "explanation": "Pattern follows arithmetic progression.",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp021",
+      "puzzleType": "pattern-completion",
+      "question": "Identify the missing element",
+      "canvasData": {
+        "grid": "3x3",
+        "shapes": [
+          { "type": "square", "x": 45, "y": 45, "size": 21, "color": "#3F51B5" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "b",
+      "explanation": "Element completes row pattern.",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp022",
+      "puzzleType": "symmetry",
+      "question": "Find the symmetrical pair",
+      "canvasData": {
+        "grid": "2x2",
+        "shapes": [
+          { "type": "circle", "x": 30, "y": 30, "r": 13, "color": "#F44336" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "a",
+      "explanation": "Horizontal symmetry match.",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp023",
+      "puzzleType": "rotation",
+      "question": "Which rotation completes?",
+      "canvasData": {
+        "grid": "3x3",
+        "shapes": [
+          { "type": "triangle", "x": 50, "y": 50, "size": 17, "color": "#4CAF50" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "c",
+      "explanation": "90 degree clockwise rotation.",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp024",
+      "puzzleType": "sequence",
+      "question": "Continue the sequence pattern",
+      "canvasData": {
+        "grid": "4x4",
+        "shapes": [
+          { "type": "square", "x": 60, "y": 60, "size": 23, "color": "#00ACC1" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "b",
+      "explanation": "Sequence follows geometric pattern.",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp025",
+      "puzzleType": "color-pattern",
+      "question": "Match the color progression",
+      "canvasData": {
+        "grid": "3x3",
+        "shapes": [
+          { "type": "circle", "x": 40, "y": 40, "r": 15, "color": "#E91E63" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "d",
+      "explanation": "Colors follow hue rotation.",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp026",
+      "puzzleType": "spatial",
+      "question": "Which arrangement is correct?",
+      "canvasData": {
+        "grid": "2x2",
+        "shapes": [
+          { "type": "triangle", "x": 35, "y": 35, "size": 24, "color": "#673AB7" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "a",
+      "explanation": "Spatial pattern follows matrix layout.",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp027",
+      "puzzleType": "pattern-completion",
+      "question": "Complete the visual sequence",
+      "canvasData": {
+        "grid": "3x3",
+        "shapes": [
+          { "type": "square", "x": 50, "y": 50, "size": 19, "color": "#CDDC39" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "c",
+      "explanation": "Pattern completes alternating sequence.",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp028",
+      "puzzleType": "symmetry",
+      "question": "Identify the correct symmetry",
+      "canvasData": {
+        "grid": "4x4",
+        "shapes": [
+          { "type": "circle", "x": 55, "y": 55, "r": 17, "color": "#FF6F00" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "b",
+      "explanation": "Bilateral symmetry along diagonal.",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp029",
+      "puzzleType": "rotation",
+      "question": "Which rotation angle fits?",
+      "canvasData": {
+        "grid": "3x3",
+        "shapes": [
+          { "type": "triangle", "x": 45, "y": 45, "size": 21, "color": "#2196F3" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "d",
+      "explanation": "135 degree rotation completes pattern.",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "rp030",
+      "puzzleType": "sequence",
+      "question": "What is the next pattern?",
+      "canvasData": {
+        "grid": "2x2",
+        "shapes": [
+          { "type": "square", "x": 30, "y": 30, "size": 25, "color": "#FF1744" }
+        ]
+      },
+      "options": [
+        { "id": "a", "imageUrl": "/static/images/icon-192.png", "label": "Option A" },
+        { "id": "b", "imageUrl": "/static/images/icon-192.png", "label": "Option B" },
+        { "id": "c", "imageUrl": "/static/images/icon-192.png", "label": "Option C" },
+        { "id": "d", "imageUrl": "/static/images/icon-192.png", "label": "Option D" }
+      ],
+      "correctAnswer": "a",
+      "explanation": "Pattern follows recursive sequence.",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    }
+  ]
+}

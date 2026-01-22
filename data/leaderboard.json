@@ -1,0 +1,94 @@
+{
+  "leaderboard": [
+    {
+      "userId": "user_1765267335919",
+      "userName": "Santosh",
+      "entries": [
+        {
+          "mode": "memory",
+          "score": 216,
+          "questionsAttempted": 4,
+          "correctAnswers": 4,
+          "accuracy": 100.0,
+          "timestamp": "2025-12-09T13:48:26.960Z",
+          "duration": 52
+        },
+        {
+          "mode": "technical",
+          "score": 30,
+          "questionsAttempted": 5,
+          "correctAnswers": 3,
+          "accuracy": 60.0,
+          "timestamp": "2025-12-09T13:50:49.159Z",
+          "duration": 42
+        }
+      ]
+    },
+    {
+      "userId": "user_1765278497829",
+      "userName": "Krishna Kumar Sah",
+      "entries": [
+        {
+          "mode": "memory",
+          "score": 258,
+          "questionsAttempted": 4,
+          "correctAnswers": 4,
+          "accuracy": 100.0,
+          "timestamp": "2025-12-09T17:12:03.275Z",
+          "duration": 56
+        },
+        {
+          "mode": "memory",
+          "score": 320,
+          "questionsAttempted": 4,
+          "correctAnswers": 4,
+          "accuracy": 100.0,
+          "timestamp": "2025-12-09T17:26:15.567Z",
+          "duration": 25
+        },
+        {
+          "mode": "memory",
+          "score": 328,
+          "questionsAttempted": 4,
+          "correctAnswers": 4,
+          "accuracy": 100.0,
+          "timestamp": "2025-12-09T17:28:57.121Z",
+          "duration": 21
+        },
+        {
+          "mode": "reflection",
+          "score": 25,
+          "questionsAttempted": 2,
+          "correctAnswers": 1,
+          "accuracy": 50.0,
+          "timestamp": "2025-12-09T17:46:50.730Z",
+          "duration": 13
+        }
+      ]
+    },
+    {
+      "userId": "user_1765468802378",
+      "userName": "Krishna",
+      "entries": [
+        {
+          "mode": "memory",
+          "score": 324,
+          "questionsAttempted": 4,
+          "correctAnswers": 4,
+          "accuracy": 100.0,
+          "timestamp": "2025-12-11T21:45:57.861Z",
+          "duration": 23
+        },
+        {
+          "mode": "memory",
+          "score": 648,
+          "questionsAttempted": 4,
+          "correctAnswers": 4,
+          "accuracy": 100.0,
+          "timestamp": "2025-12-11T21:46:24.895Z",
+          "duration": 23
+        }
+      ]
+    }
+  ]
+}

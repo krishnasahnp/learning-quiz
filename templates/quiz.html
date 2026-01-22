@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Quiz Web App - Multiple game modes with offline support">
+    <title>Quiz Hub - Learning Journal PWA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}" />
+    <meta name="theme-color" content="#1976d2" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="LearningPWA" />
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/icon-192.png') }}" />
+</head>
+<body class="quiz-page">
+    <div class="bg-animated"></div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('home') }}" class="logo"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="LJ.PWA Logo" class="site-logo" style="height: 40px; width: auto; vertical-align: middle;" onerror="this.style.display='none';this.insertAdjacentHTML('afterend', 'LJ.PWA');"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('journal_page') }}">Journal</a></li>
+                <li><a href="{{ url_for('about_page') }}">About</a></li>
+                <li><a href="{{ url_for('projects_page') }}">Projects</a></li>
+                <li class="nav-cta"><a href="{{ url_for('quiz_page') }}" class="btn btn-glow active">Play Quiz<span class="emoji">🎮</span></a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="quiz-hero fade-in">
+            <div class="quiz-hero-card fullscreen">
+                <div class="hero-header-compact">
+                    <div class="pill pill-primary pulse-glow">
+                        <span>✨</span>
+                        <span>Welcome to Interactive Quiz Hub</span>
+                    </div>
+                    <h1 class="hero-title-dynamic">Play. Learn. Win.</h1>
+                    <p class="hero-subtitle-compact">Choose a mode, test your skills, and track your progress with rich animations, instant feedback, and offline support.</p>
+                </div>
+                <div class="quiz-action-cards">
+                    <div class="action-card icon-rules" id="viewRulesBtn" role="button" tabindex="0">
+                        <div class="action-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="action-card-content">
+                            <span class="action-card-label">Rules & Scoring</span>
+                            <span class="action-card-desc">View game rules</span>
+                        </div>
+                        <div class="action-card-arrow">→</div>
+                    </div>
+                    <div class="action-card action-card-primary icon-leaderboard" id="viewLeaderboardBtn" role="button" tabindex="0">
+                        <div class="action-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9H4.5a2.5 2.5 0 0 0 0 5H6"></path>
+                                <path d="M18 9h-1.5a2.5 2.5 0 0 0 0 5H18"></path>
+                                <path d="M4 22h16"></path>
+                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                            </svg>
+                        </div>
+                        <div class="action-card-content">
+                            <span class="action-card-label">Leaderboard</span>
+                            <span class="action-card-desc">Top performers</span>
+                        </div>
+                        <div class="action-card-arrow">→</div>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-profile-card">
+                <div class="profile-avatar profile-circle">🎮</div>
+                <h3>Player Profile</h3>
+                <div class="profile-buttons">
+                    <button id="profileActionBtn" class="btn btn-primary">Add Player</button>
+                    <button id="switchUserBtn" class="btn btn-outline">Switch User</button>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat-chip">⭐ XP Ready</div>
+                    <div class="stat-chip">🛡 Offline Safe</div>
+                    <div class="stat-chip">🏆 Leaderboard</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quizDashboard">
+            <div class="quiz-mode-grid">
+                <div class="quiz-card mode-memory" data-mode="memory">
+                    <div class="quiz-card-icon">🧠</div>
+                    <h3>Memory Match</h3>
+                    <p>Flip cards to find pairs. Earn time and efficiency bonuses.</p>
+                    <div class="quiz-card-meta">Last played: <span class="last-play" data-last="memory">—</span></div>
+                    <button class="btn btn-primary start-mode">Start</button>
+                </div>
+                <div class="quiz-card mode-wordscramble" data-mode="wordscramble">
+                    <div class="quiz-card-icon">🔤</div>
+                    <h3>Word Scramble</h3>
+                    <p>Unscramble the tiles. Use hints wisely for maximum points.</p>
+                    <div class="quiz-card-meta">Last played: <span class="last-play" data-last="wordscramble">—</span></div>
+                    <button class="btn btn-primary start-mode">Start</button>
+                </div>
+                <div class="quiz-card mode-reflection" data-mode="reflection">
+                    <div class="quiz-card-icon">🪞</div>
+                    <h3>Reflection Puzzle</h3>
+                    <p>Visual logic on canvas. Pick the correct option before time runs out.</p>
+                    <div class="quiz-card-meta">Last played: <span class="last-play" data-last="reflection">—</span></div>
+                    <button class="btn btn-primary start-mode">Start</button>
+                </div>
+                <div class="quiz-card mode-technical" data-mode="technical">
+                    <div class="quiz-card-icon">💻</div>
+                    <h3>Technical Quiz</h3>
+                    <p>Multiple-choice challenges with timers, progress, and instant feedback.</p>
+                    <div class="quiz-card-meta">Last played: <span class="last-play" data-last="technical">—</span></div>
+                    <button class="btn btn-primary start-mode">Start</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="rules-leader-grid">
+            <div class="rules-card fade-in">
+                <div class="card-header">
+                    <span class="pill pill-accent">Rules & Scoring</span>
+                    <span class="icon-bounce">📜</span>
+                </div>
+                <ul class="rules-list">
+                    <li><strong>Technical:</strong> 20 questions, +10 per correct, 60s timer, instant feedback.</li>
+                    <li><strong>Memory:</strong> Match pairs for +20, time bonus, efficiency bonus for low moves.</li>
+                    <li><strong>Scramble:</strong> +15/+10/+5 by attempt, hint costs 5, build words fast.</li>
+                    <li><strong>Reflection:</strong> +25 per puzzle, visual logic, time bonus on summary.</li>
+                </ul>
+                <div class="rules-actions">
+                    <button class="btn btn-outline" id="rulesInlineBtn">View Details</button>
+                </div>
+            </div>
+
+            <div class="leader-card fade-in">
+                <div class="card-header">
+                    <span class="pill pill-primary">Leaderboard</span>
+                    <span class="icon-bounce">🏆</span>
+                </div>
+                <p class="leader-copy">Track top scores across all modes. Play, improve accuracy, and climb the ranks.</p>
+                <div class="leader-quick">
+                    <div><strong>Live</strong><br><span>Real-time updates</span></div>
+                    <div><strong>Offline</strong><br><span>Queued sync when online</span></div>
+                    <div><strong>Filters</strong><br><span>Mode + search</span></div>
+                </div>
+                <button class="btn btn-primary" id="viewLeaderboardBtnCard">Open Leaderboard</button>
+            </div>
+        </section>
+
+        <section id="quizPlayArea" class="quiz-play-area hidden">
+            <div class="quiz-toolbar">
+                <div class="quiz-progress-wrap">
+                    <div id="questionCounter">0/0</div>
+                    <div class="progress-bar">
+                        <div id="progressFill"></div>
+                    </div>
+                </div>
+                <div class="quiz-timer" aria-live="polite">⏱ <span id="timerValue">00:00</span></div>
+                <div class="quiz-score">💯 <span id="scoreValue">0</span></div>
+                <div class="quiz-actions">
+                    <button id="rulesInlineBtn" class="btn btn-outline">Rules</button>
+                    <button id="quitModeBtn" class="btn btn-secondary">Exit</button>
+                </div>
+            </div>
+
+            <div id="modePanels">
+                <div id="panel-technical" class="mode-panel hidden">
+                    <div class="technical-game-wrapper">
+                        <div class="technical-question-header">
+                            <div class="technical-question-info">
+                                <span class="question-number-label">Question</span>
+                                <span class="question-number-value" id="technicalQuestionNumber">1/30</span>
+                            </div>
+                            <button class="btn-technical-skip" id="technicalSkipBtn" title="Skip to next question">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                    <path d="M15 6h6v12h-6"></path>
+                                </svg>
+                                <span>Skip</span>
+                            </button>
+                        </div>
+                        <div class="technical-container-modern">
+                            <div class="technical-question-modern" id="techQuestion"></div>
+                            <div class="technical-options-modern" id="techOptions"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="panel-memory" class="mode-panel hidden">
+                    <div class="memory-game-wrapper">
+                        <div class="memory-question-header">
+                            <div class="memory-question-info">
+                                <span class="question-number-label">Question</span>
+                                <span class="question-number-value" id="memoryQuestionNumber">1/15</span>
+                            </div>
+                            <button class="btn-memory-skip" id="memorySkipBtn" title="Skip to next question set">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                    <path d="M15 6h6v12h-6"></path>
+                                </svg>
+                                <span>Skip</span>
+                            </button>
+                        </div>
+                        <div class="memory-header-stats">
+                            <div class="memory-stat-top">
+                                <div class="stat-top-icon">⏱</div>
+                                <div class="stat-top-content">
+                                    <span class="stat-top-label">Time</span>
+                                    <span class="stat-top-value" id="memoryTimer">00:00</span>
+                                </div>
+                            </div>
+                            <div class="memory-stat-top">
+                                <div class="stat-top-icon">🎯</div>
+                                <div class="stat-top-content">
+                                    <span class="stat-top-label">Moves</span>
+                                    <span class="stat-top-value" id="memoryMoves">0</span>
+                                </div>
+                            </div>
+                            <div class="memory-stat-top">
+                                <div class="stat-top-icon">✨</div>
+                                <div class="stat-top-content">
+                                    <span class="stat-top-label">Pairs</span>
+                                    <span class="stat-top-value" id="memoryPairs">0/4</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="memory-grid" id="memoryGrid"></div>
+                    </div>
+                </div>
+
+                <div id="panel-wordscramble" class="mode-panel hidden">
+                    <div class="scramble-game-wrapper">
+                        <div class="scramble-question-header">
+                            <div class="scramble-question-info">
+                                <span class="question-number-label">Question</span>
+                                <span class="question-number-value" id="scrambleQuestionNumber">1/20</span>
+                            </div>
+                            <button class="btn-scramble-skip" id="scrambleSkipBtn" title="Skip to next question">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                    <path d="M15 6h6v12h-6"></path>
+                                </svg>
+                                <span>Skip</span>
+                            </button>
+                        </div>
+                        <div class="scramble-container-modern">
+                            <div class="scramble-word-modern" id="scrambleTiles"></div>
+                            <div class="scramble-input-modern">
+                                <input type="text" id="scrambleInput" placeholder="Type your answer or tap tiles above" aria-label="Unscrambled answer" />
+                                <button id="scrambleSubmit" class="btn-scramble-submit">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Submit</span>
+                                </button>
+                            </div>
+                            <div class="scramble-actions-modern">
+                                <button id="scrambleHint" class="btn-scramble-hint">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M12 16v-4"></path>
+                                        <path d="M12 8h.01"></path>
+                                    </svg>
+                                    <span>Hint (-5)</span>
+                                </button>
+                            </div>
+                            <div class="scramble-hint-modern" id="scrambleHintText"></div>
+                            <div class="scramble-answer-modern hidden" id="scrambleAnswerDisplay">
+                                <div class="answer-label">Correct Answer:</div>
+                                <div class="answer-value" id="scrambleAnswerValue"></div>
+                            </div>
+                            <button class="btn-show-answer hidden" id="scrambleShowAnswerBtn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                                <span>Show Answer</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="panel-reflection" class="mode-panel hidden">
+                    <div class="reflection-game-wrapper">
+                        <div class="reflection-question-header">
+                            <div class="reflection-question-info">
+                                <span class="question-number-label">Question</span>
+                                <span class="question-number-value" id="reflectionQuestionNumber">1/30</span>
+                            </div>
+                            <button class="btn-reflection-skip" id="reflectionSkipBtn" title="Skip to next question">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                    <path d="M15 6h6v12h-6"></path>
+                                </svg>
+                                <span>Skip</span>
+                            </button>
+                        </div>
+                        <div class="reflection-container-modern">
+                            <div class="reflection-canvas-wrapper">
+                                <div class="reflection-question-text" id="reflectionQuestionText">Complete the pattern</div>
+                                <canvas id="reflectionCanvas" width="700" height="150" aria-label="Reflection puzzle canvas"></canvas>
+                            </div>
+                            <div class="reflection-actions-modern">
+                                <button id="reflectionHint" class="btn-reflection-hint">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M12 16v-4"></path>
+                                        <path d="M12 8h.01"></path>
+                                    </svg>
+                                    <span>Hint (-5)</span>
+                                </button>
+                            </div>
+                            <div class="reflection-hint-modern" id="reflectionHintText"></div>
+                            <div class="reflection-options-modern" id="reflectionOptions"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="leaderboardSection" class="hidden">
+            <div class="leaderboard-modern">
+                <div class="leaderboard-header-modern">
+                    <div>
+                        <h2>🏆 Leaderboard</h2>
+                        <p>Top performers across all game modes</p>
+                    </div>
+                </div>
+                <div class="leaderboard-controls-modern">
+                    <div class="control-card">
+                        <div class="control-icon-wrapper">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="9" y1="3" x2="9" y2="21"></line>
+                            </svg>
+                        </div>
+                        <div class="control-content">
+                            <label class="control-label-modern" for="leaderboardMode">Filter by Mode</label>
+                            <div class="select-wrapper">
+                                <select id="leaderboardMode" class="control-select-modern">
+                                    <option value="all">🌐 All Modes</option>
+                                    <option value="technical">💻 Technical Quiz</option>
+                                    <option value="memory">🧠 Memory Match</option>
+                                    <option value="wordscramble">🔤 Word Scramble</option>
+                                    <option value="reflection">🪞 Reflection Puzzle</option>
+                                </select>
+                                <svg class="select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-card">
+                        <div class="control-icon-wrapper">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="control-content">
+                            <label class="control-label-modern" for="leaderboardLimit">Show Results</label>
+                            <div class="select-wrapper">
+                                <select id="leaderboardLimit" class="control-select-modern">
+                                    <option value="10">📊 Top 10</option>
+                                    <option value="50" selected>📈 Top 50</option>
+                                    <option value="100">🏅 Top 100</option>
+                                </select>
+                                <svg class="select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-card control-card-search">
+                        <div class="control-icon-wrapper search-icon-wrapper">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </div>
+                        <div class="control-content search-content">
+                            <label class="control-label-modern" for="leaderboardSearch">Search Players</label>
+                            <div class="search-wrapper">
+                                <input type="search" id="leaderboardSearch" class="control-search-modern" placeholder="Type player name..." autocomplete="off" />
+                                <button type="button" class="search-clear" id="searchClearBtn" aria-label="Clear search" style="display: none;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="leaderboard-table-wrapper-modern">
+                    <table class="leaderboard-table-modern">
+                        <thead>
+                            <tr>
+                                <th class="rank-col">Rank</th>
+                                <th class="name-col">Player</th>
+                                <th class="mode-col">Mode</th>
+                                <th class="score-col">Score</th>
+                                <th class="questions-col">Questions</th>
+                                <th class="accuracy-col">Accuracy</th>
+                                <th class="date-col">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboardBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-backdrop hidden" id="userModal" role="dialog" aria-modal="true">
+        <div class="user-modal-modern">
+            <div class="user-modal-icon">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="40" r="38" stroke="url(#grad1)" stroke-width="3" stroke-dasharray="240" stroke-dashoffset="0">
+                        <animate attributeName="stroke-dashoffset" from="240" to="0" dur="1.2s" fill="freeze"/>
+                    </circle>
+                    <path d="M25 40L35 50L55 30" stroke="url(#grad2)" stroke-width="4" stroke-linecap="round" stroke-dasharray="40" stroke-dashoffset="40">
+                        <animate attributeName="stroke-dashoffset" from="40" to="0" dur="0.8s" begin="0.6s" fill="freeze"/>
+                    </path>
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <button type="button" class="user-modal-close" data-close-user aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <h2 class="user-modal-title">Welcome to Quiz Hub</h2>
+            <p class="user-modal-subtitle">Enter your name to start playing</p>
+            <div class="user-modal-input-wrapper">
+                <div class="user-modal-input-icon">👤</div>
+                <input type="text" id="userNameInput" maxlength="50" placeholder="Your name" class="user-modal-input" />
+            </div>
+            <p class="user-modal-helper">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 16v-4"></path>
+                    <path d="M12 8h.01"></path>
+                </svg>
+                We store it locally for progress and leaderboard submissions. You can skip and add it later.
+            </p>
+            <div class="user-modal-actions">
+                <button type="button" class="btn-user-skip" id="skipUserBtn">
+                    <span>Skip</span>
+                </button>
+                <button type="button" class="btn-user-save" id="saveUserBtn">
+                    <span>Save</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-backdrop hidden" id="rulesModal" role="dialog" aria-modal="true">
+        <div class="rules-modal-modern">
+            <div class="rules-modal-header">
+                <div class="rules-modal-icon">
+                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="32" r="30" stroke="url(#rulesGrad1)" stroke-width="3" stroke-dasharray="188" stroke-dashoffset="0">
+                            <animate attributeName="stroke-dashoffset" from="188" to="0" dur="1.5s" fill="freeze"/>
+                        </circle>
+                        <path d="M20 32L28 40L44 24" stroke="url(#rulesGrad2)" stroke-width="4" stroke-linecap="round" stroke-dasharray="40" stroke-dashoffset="40">
+                            <animate attributeName="stroke-dashoffset" from="40" to="0" dur="1s" begin="1s" fill="freeze"/>
+                        </path>
+                        <defs>
+                            <linearGradient id="rulesGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="rulesGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h2 class="rules-modal-title">Rules & Scoring</h2>
+                <p class="rules-modal-subtitle">Learn how to play and maximize your score</p>
+                <button type="button" class="rules-modal-close" data-close-rules aria-label="Close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="rules-modal-body" id="rulesContent">
+                <!-- Filled by JS -->
+            </div>
+            <div class="rules-modal-footer">
+                <label class="rules-toggle-label">
+                    <input type="checkbox" id="hideRulesToggle" />
+                    <span>Don't show again for this mode</span>
+                </label>
+                <button type="button" class="btn-rules-close" data-close-rules>
+                    <span>Got it!</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-backdrop hidden" id="summaryModal" role="dialog" aria-modal="true">
+        <div class="summary-modal-modern">
+            <div class="summary-modal-header">
+                <div class="summary-modal-icon">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="40" cy="40" r="38" stroke="url(#summaryGrad1)" stroke-width="3" stroke-dasharray="240" stroke-dashoffset="0">
+                            <animate attributeName="stroke-dashoffset" from="240" to="0" dur="1.2s" fill="freeze"/>
+                        </circle>
+                        <path d="M25 40L35 50L55 30" stroke="url(#summaryGrad2)" stroke-width="4" stroke-linecap="round" stroke-dasharray="40" stroke-dashoffset="40">
+                            <animate attributeName="stroke-dashoffset" from="40" to="0" dur="0.8s" begin="0.6s" fill="freeze"/>
+                        </path>
+                        <defs>
+                            <linearGradient id="summaryGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="summaryGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h2 class="summary-modal-title">🎉 Quiz Complete! 🎉</h2>
+                <p class="summary-modal-subtitle">Great job! Here's your performance summary</p>
+                <button type="button" class="summary-modal-close" data-close-summary aria-label="Close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="summary-modal-body" id="summaryContent"></div>
+            <div class="summary-modal-footer">
+                <button type="button" class="btn-summary-next hidden" id="nextQuestionBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                    <span>Next Question</span>
+                </button>
+                <button type="button" class="btn-summary-retry" id="retryModeBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="23 4 23 10 17 10"></polyline>
+                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                    </svg>
+                    <span>Retry</span>
+                </button>
+                <button type="button" class="btn-summary-another" id="anotherModeBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2v20M2 12h20"></path>
+                    </svg>
+                    <span>Another Mode</span>
+                </button>
+                <button type="button" class="btn-summary-close" data-close-summary>
+                    <span>Close</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/storage.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/thirdparty.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+</body>
+</html>
+

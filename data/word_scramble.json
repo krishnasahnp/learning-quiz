@@ -1,0 +1,184 @@
+{
+  "wordScramble": [
+    {
+      "id": "ws001",
+      "word": "ALGORITHM",
+      "scrambled": "MHALOGTIR",
+      "hint": "A step-by-step problem-solving procedure",
+      "category": "Computer Science",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws002",
+      "word": "JAVASCRIPT",
+      "scrambled": "AVAJTSIRCP",
+      "hint": "Language that runs in browsers",
+      "category": "Programming",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws003",
+      "word": "PYTHON",
+      "scrambled": "TYPHON",
+      "hint": "Popular general-purpose language",
+      "category": "Programming",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws004",
+      "word": "FUNCTION",
+      "scrambled": "NCTUIFNO",
+      "hint": "A reusable block of code",
+      "category": "Programming",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws005",
+      "word": "VARIABLE",
+      "scrambled": "VRIABALE",
+      "hint": "Container that stores data",
+      "category": "Programming",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws006",
+      "word": "DATABASE",
+      "scrambled": "ATADBASE",
+      "hint": "Organized collection of data",
+      "category": "Computer Science",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws007",
+      "word": "FRAMEWORK",
+      "scrambled": "RFAMEWORK",
+      "hint": "Pre-built structure for applications",
+      "category": "Web Development",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws008",
+      "word": "RESPONSIVE",
+      "scrambled": "RESPONSIVE",
+      "hint": "Design that adapts to screen sizes",
+      "category": "Web Development",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws009",
+      "word": "API",
+      "scrambled": "IPA",
+      "hint": "Application Programming Interface",
+      "category": "Web Development",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws010",
+      "word": "ENCRYPTION",
+      "scrambled": "ENCRYPTION",
+      "hint": "Converting data into secure code",
+      "category": "Security",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws011",
+      "word": "AUTHENTICATION",
+      "scrambled": "AUTHENTICATION",
+      "hint": "Verifying user identity",
+      "category": "Security",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws012",
+      "word": "DEPLOYMENT",
+      "scrambled": "DEPLOYMENT",
+      "hint": "Releasing application to production",
+      "category": "DevOps",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws013",
+      "word": "CONTAINER",
+      "scrambled": "CONTAINER",
+      "hint": "Isolated environment for applications",
+      "category": "DevOps",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws014",
+      "word": "MICROSERVICE",
+      "scrambled": "MICROSERVICE",
+      "hint": "Small independent service architecture",
+      "category": "Architecture",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws015",
+      "word": "REACTIVE",
+      "scrambled": "REACTIVE",
+      "hint": "Responding to events and changes",
+      "category": "Programming",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws016",
+      "word": "ASYNC",
+      "scrambled": "ASYNC",
+      "hint": "Non-blocking operations",
+      "category": "Programming",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws017",
+      "word": "PROMISE",
+      "scrambled": "PROMISE",
+      "hint": "JavaScript async operation handler",
+      "category": "Programming",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws018",
+      "word": "MIDDLEWARE",
+      "scrambled": "MIDDLEWARE",
+      "hint": "Software layer between applications",
+      "category": "Web Development",
+      "difficulty": "hard",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws019",
+      "word": "OPTIMIZATION",
+      "scrambled": "OPTIMIZATION",
+      "hint": "Improving performance and efficiency",
+      "category": "Performance",
+      "difficulty": "medium",
+      "imageUrl": "/static/images/icon-192.png"
+    },
+    {
+      "id": "ws020",
+      "word": "CACHING",
+      "scrambled": "CACHING",
+      "hint": "Storing data for quick access",
+      "category": "Performance",
+      "difficulty": "easy",
+      "imageUrl": "/static/images/icon-192.png"
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learning Journal PWA - My Creative Computing Journey">
+    <title>Home - Learning Journal PWA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}" />
+    <meta name="theme-color" content="#1976d2" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="LearningPWA" />
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/icon-192.png') }}" />
+    <meta http-equiv="Permissions-Policy" content="autoplay=(self), encrypted-media=(self), accelerometer=(self), gyroscope=(self), picture-in-picture=(self), clipboard-write=(self)" />
+</head>
+<body>
+    <div class="bg-animated"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('home') }}" class="logo"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="LJ.PWA Logo" class="site-logo" style="height: 40px; width: auto; vertical-align: middle;" onerror="this.style.display='none';this.insertAdjacentHTML('afterend', 'LJ.PWA');"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="{{ url_for('home') }}" class="active">Home</a></li>
+                <li><a href="{{ url_for('journal_page') }}">Journal</a></li>
+                <li><a href="{{ url_for('about_page') }}">About</a></li>
+                <li><a href="{{ url_for('projects_page') }}">Projects</a></li>
+                <li class="nav-cta"><a href="{{ url_for('quiz_page') }}" class="btn btn-glow">Play Quiz<span class="emoji">🎮</span></a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Welcome to My Learning Journey</h1>
+                <p class="subtitle">
+                    Documenting my creative computing adventure through weekly reflections, 
+                    projects, and discoveries. This Progressive Web App showcases my growth 
+                    as a developer and creative technologist over a 14-week journey.
+                </p>
+                <div class="hero-buttons">
+                    <a href="{{ url_for('journal_page') }}" class="btn btn-primary">
+                        View Journal →
+                    </a>
+                    <a href="{{ url_for('quiz_page') }}" class="btn btn-outline btn-play-quiz">
+                        <span>Play Quiz</span>
+                        <span class="emoji">🎮</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <h3 style="margin-bottom: 1rem; color: var(--dark);">Current Progress</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">14</span>
+                            <span>Weeks</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1</span>
+                            <span>Entries</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span>Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">12+</span>
+                            <span>Skills</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inspiration Quotes Modern Slider -->
+    <section>
+      <div class="section-header">
+        <h2>Inspiration</h2>
+      </div>
+      <div id="quotesGrid" class="quotes-slider-container"></div>
+    </section>
+
+            <!-- About Section -->
+            <section>
+                <div class="about-container">
+                    <!-- Profile Card -->
+                    <div class="profile-card fade-in">
+                        <div class="profile-image"><img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="Profile photo" class="profile-photo"></div>
+                        <h2 class="profile-name">Krishna Sah</h2>
+                        <p class="profile-title">Creative Computing Student</p>
+                        <div class="social-links">
+                            <a href="https://github.com/krishnasahnp/" class="social-link" target="_blank" title="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/krishna-sah/" class="social-link" target="_blank" title="LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:kr.krishna.np@gmail.com" class="social-link" title="Email">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- About Content -->
+                    <div class="about-content fade-in">
+                        <!-- Introduction -->
+                        <div class="about-section">
+                            <h3>Hello! I'm a Creative Computing Student</h3>
+                            <p>
+                                Welcome to my learning journey! I'm passionate about the intersection of 
+                                creativity and technology, exploring how code can be used to create beautiful, 
+                                functional, and meaningful digital experiences. This Progressive Web App serves 
+                                as my digital portfolio and learning journal throughout this exciting journey.
+                            </p>
+                            <p>
+                                Currently, I'm diving deep into web technologies, focusing on building responsive, 
+                                accessible, and performant web applications. I believe in learning by doing, and 
+                                this project represents my commitment to documenting my growth and sharing my 
+                                discoveries along the way.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="section-header">
+            <h2>What Makes This PWA Special</h2>
+            <p>Built with modern web technologies and best practices</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card fade-in">
+                <div class="feature-icon">📱</div>
+                <h3>Mobile-First Design</h3>
+                <p>Optimized for mobile devices with responsive layouts that adapt seamlessly to any screen size, ensuring a perfect experience on all devices.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">⚡</div>
+                <h3>Progressive Enhancement</h3>
+                <p>Built progressively, starting with HTML and CSS foundations, then enhancing with JavaScript for richer, more interactive experiences.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🎨</div>
+                <h3>Modern UI/UX</h3>
+                <p>Contemporary design featuring smooth animations, vibrant gradients, and thoughtful interactive elements that create an engaging user experience.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">📖</div>
+                <h3>Learning Documentation</h3>
+                <p>Comprehensive weekly journal entries capturing insights, challenges, breakthrough moments, and continuous growth throughout the learning journey.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">💼</div>
+                <h3>Portfolio Showcase</h3>
+                <p>Professional presentation of projects with detailed descriptions, technical stacks, and links to live demos and source code repositories.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🔄</div>
+                <h3>Version Controlled</h3>
+                <p>All changes tracked in GitHub for complete transparency, collaboration opportunities, and a clear history of development progress.</p>
+            </div>
+        </div>
+    </section>
+
+        <!-- Google Maps: London, UK (before footer) -->
+<section style="width:100%;padding:2rem 0 0 0;text-align:center;">
+    <h2 style="margin-bottom:1rem;">Location: London, United Kingdom</h2>
+    <div style="display:flex;justify-content:center;width:100%;">
+      <div style="width:100%;max-width:95%;min-height:640px;box-shadow:0 10px 38px 0 rgba(30,40,120,.10);border-radius:24px;overflow:hidden;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39753.69225419435!2d-0.15369877117736653!3d51.50735088012005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3336000001%3A0x6decf14b7e5b3b35!2sLondon%2C%20UK!5e0!3m2!1sen!2suk!4v1709999999999!5m2!1sen!2suk"
+          width="100%" height="340" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Google Maps - London, United Kingdom"></iframe>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Learning Journal PWA</h3>
+                <p>A progressive web application documenting my 14-week journey through creative computing and web development.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('journal_page') }}">Journal</a>
+                <a href="{{ url_for('about_page') }}">About</a>
+                <a href="{{ url_for('projects_page') }}">Projects</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="https://github.com/krishnasahnp/" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/krishna-sah/" target="_blank">LinkedIn</a>
+                <a href="mailto:kr.krishna.np@gmail.com">Email</a>
+            </div>
+            <div class="footer-section">
+                <h3>Technologies</h3>
+                <p>HTML5</p>
+                <p>CSS3</p>
+                <p>JavaScript</p>
+                <p>PWA Standards</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Learning Journal PWA. Developed By Krishna Sah.</p>
+        </div>
+    </footer>
+
+<div class="welcome-modal-backdrop" style="display:none;">
+  <div class="welcome-modal">
+    <div class="welcome-modal-icon">
+      <!-- SVG animated icon (check/confetti) -->
+      <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg" class="checksvg">
+        <circle cx="33" cy="33" r="30" stroke="#6346F1" stroke-width="6" stroke-dasharray="190" stroke-dashoffset="0">
+          <animate attributeName="stroke-dashoffset" from="190" to="0" dur="1s" fill="freeze"/>
+        </circle>
+        <path d="M19 36L30 47L47 23" stroke="#34d399" stroke-width="6" stroke-linecap="round" stroke-dasharray="36" stroke-dashoffset="36">
+          <animate attributeName="stroke-dashoffset" from="36" to="0" dur="0.6s" begin="0.8s" fill="freeze"/>
+        </path>
+      </svg>
+    </div>
+    <h2>Welcome to My Journal!</h2>
+    <p style="font-size:1.08rem;margin-bottom:1.2rem;">Explore my creative journey through web projects, weekly learning journals, and inspirations. Start by checking the quotes or projects below. Congratulations on joining this digital adventure!</p>
+    <button class="welcome-modal-close">OK, Let’s Go!</button>
+  </div>
+</div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/storage.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/thirdparty.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

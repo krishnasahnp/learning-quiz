@@ -1,0 +1,72 @@
+[
+    {
+        "week": "9",
+        "title": "Verification Test",
+        "date": "2025-11-25",
+        "taskName": "Testing Cache Fix",
+        "reflection": "Verifying that new entries appear immediately after submission without page refresh",
+        "location": {
+            "lat": "",
+            "lon": "",
+            "address": "UK"
+        },
+        "tech": [
+            "CSS"
+        ],
+        "timestamp": "2025-11-25T13:05:30.501017"
+    },
+    {
+        "week": "7",
+        "title": "Journal Flask backend",
+        "date": "2025-11-27",
+        "taskName": "Flask backend",
+        "reflection": "Add a Flask backend to your Learning Journal PWA. The backend should manage the JSON file\nand respond to frontend requests. You will test the app live on PythonAnywhere, bypassing\nlocal testing.",
+        "location": {
+            "lat": "51.246324",
+            "lon": "-0.776794",
+            "address": "Cargate, Aldershot, Rushmoor, Hampshire, England, GU11 3EW, United Kingdom"
+        },
+        "tech": [
+            "HTML",
+            "CSS",
+            "Python"
+        ],
+        "timestamp": "2025-11-27T13:39:28.757670"
+    },
+    {
+        "week": "8",
+        "title": "Testing Offline Cache",
+        "date": "2025-12-16",
+        "taskName": "Learning Journal accesible in Offline",
+        "reflection": "We have implemented the offline caching functionalites in this weeks.",
+        "location": {
+            "lat": "",
+            "lon": "",
+            "address": ""
+        },
+        "tech": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "timestamp": "2025-12-09T12:04:30.332467"
+    },
+    {
+        "week": "8",
+        "title": "Testing Offline Cache",
+        "date": "2025-12-16",
+        "taskName": "Learning Journal accesible in Offline",
+        "reflection": "We have implemented the offline caching functionalites in this weeks.",
+        "location": {
+            "lat": "",
+            "lon": "",
+            "address": ""
+        },
+        "tech": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "timestamp": "2025-12-09T12:04:30.610767"
+    }
+]

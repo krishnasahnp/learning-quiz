@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weekly learning journal entries documenting my creative computing journey">
+    <title>Journal - Learning Journal PWA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}" />
+    <meta name="theme-color" content="#1976d2" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="LearningPWA" />
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/icon-192.png') }}" />
+    <meta http-equiv="Permissions-Policy"
+        content="autoplay=(self), encrypted-media=(self), accelerometer=(self), gyroscope=(self), picture-in-picture=(self), clipboard-write=(self)" />
+</head>
+
+<body class="journal-page">
+    <div class="bg-animated"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('home') }}" class="logo"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="LJ.PWA Logo" class="site-logo"
+                    style="height: 40px; width: auto; vertical-align: middle;"
+                    onerror="this.style.display='none';this.insertAdjacentHTML('afterend', 'LJ.PWA');"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('journal_page') }}" class="active">Journal</a></li>
+                <li><a href="{{ url_for('about_page') }}">About</a></li>
+                <li><a href="{{ url_for('projects_page') }}">Projects</a></li>
+                <li class="nav-cta"><a href="{{ url_for('quiz_page') }}" class="btn btn-glow">Play Quiz<span class="emoji">🎮</span></a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>Learning Journal</h1>
+            <p>Weekly reflections, insights, and progress throughout my creative computing journey</p>
+        </div>
+        <!-- Journal Entries Section -->
+        <section>
+            <div class="section-header"
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <h2>My Reflections</h2>
+                <span id="reflectionCounter" class="tag" style="background: var(--primary); color: white;">0
+                    Entries</span>
+            </div>
+            <div class="journal-search">
+                <input type="text" id="searchQuery" placeholder="Search title, task, or reflection">
+                <input type="number" id="searchWeek" min="1" max="52" placeholder="Week #">
+                <input type="text" id="searchTech" placeholder="Tech tag (e.g., HTML)">
+                <button type="button" id="searchButton" class="btn btn-outline">Search</button>
+                <button type="button" id="resetSearchButton" class="btn btn-secondary">Reset</button>
+            </div>
+            <div class="journal-grid">
+                <!-- User Entries Will Appear Here -->
+                <div id="userJournalList"></div>
+                <!-- Week 1 Entry -->
+                <div class="journal-card fade-in">
+                    <div class="journal-header">
+                        <span class="week-badge">Week 1</span>
+                        <h3>Building the Foundation</h3>
+                        <p class="journal-date">October 29, 2025</p>
+                    </div>
+                    <div class="journal-body">
+                        <div class="journal-question">
+                            <h4>How did you approach mobile-first design?</h4>
+                            <p>
+                                I started by designing for the smallest viewport (320px) and progressively
+                                enhanced the layout for larger screens. My approach included using flexible
+                                containers with CSS Grid and Flexbox for fluid layouts, implementing
+                                touch-friendly navigation with adequate tap targets (minimum 44x44px), and
+                                ensuring typography scaled appropriately using relative units like rem and em.
+                                I added media queries at strategic breakpoints (768px for tablets and 1024px
+                                for desktops) to optimize the experience for each device category. This
+                                methodology ensured the core experience works everywhere, with enhancements
+                                for larger screens.
+                            </p>
+                        </div>
+                        <div class="journal-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Responsive Design</span>
+                            <span class="tag">Mobile-First</span>
+                            <span class="tag">Grid Layout</span>
+                            <span class="tag">Flexbox</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Week 2 Entry - Placeholder -->
+                <div class="journal-card fade-in">
+                    <div class="journal-header">
+                        <span class="week-badge">Week 2</span>
+                        <h3>Adding Interactivity</h3>
+                        <p class="journal-date">Coming Soon</p>
+                    </div>
+                    <div class="journal-body">
+                        <div class="journal-question">
+                            <h4>JavaScript Integration</h4>
+                            <p>
+                                This week will focus on adding JavaScript functionality to enhance user
+                                interactions. Topics to explore include DOM manipulation, event listeners,
+                                smooth scrolling, and dynamic content loading.
+                            </p>
+                        </div>
+                        <div class="journal-question">
+                            <h4>Progressive Enhancement</h4>
+                            <p>
+                                Learning how to layer JavaScript enhancements on top of the existing HTML/CSS
+                                foundation while maintaining functionality for users without JavaScript enabled.
+                            </p>
+                        </div>
+                        <div class="journal-question">
+                            <h4>Performance Optimization</h4>
+                            <p>
+                                Exploring techniques for optimizing page load times, implementing lazy loading
+                                for images, and minimizing JavaScript execution for better user experience.
+                            </p>
+                        </div>
+                        <div class="journal-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">DOM</span>
+                            <span class="tag">Events</span>
+                            <span class="tag">Performance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Week 3 Entry - Placeholder -->
+                <div class="journal-card fade-in">
+                    <div class="journal-header">
+                        <span class="week-badge">Week 3</span>
+                        <h3>PWA Features</h3>
+                        <p class="journal-date">Coming Soon</p>
+                    </div>
+                    <div class="journal-body">
+                        <div class="journal-question">
+                            <h4>Service Workers</h4>
+                            <p>
+                                Implementing service workers to enable offline functionality and improve
+                                performance through caching strategies. Understanding the service worker
+                                lifecycle and cache management.
+                            </p>
+                        </div>
+                        <div class="journal-question">
+                            <h4>Web App Manifest</h4>
+                            <p>
+                                Creating a web app manifest to make the application installable on mobile
+                                devices and desktop. Configuring icons, theme colors, and display modes.
+                            </p>
+                        </div>
+                        <div class="journal-question">
+                            <h4>Offline Strategy</h4>
+                            <p>
+                                Designing an effective offline experience that allows users to access content
+                                even without internet connectivity. Implementing cache-first strategies for
+                                static assets.
+                            </p>
+                        </div>
+                        <div class="journal-tags">
+                            <span class="tag">PWA</span>
+                            <span class="tag">Service Workers</span>
+                            <span class="tag">Offline</span>
+                            <span class="tag">Manifest</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Journal Entry Submission Form -->
+        <section>
+            <div class="journal-form" id="journalFormWrapper">
+                <h2 style="margin-bottom:1rem;">Add Journal Entry</h2>
+                <form id="journalForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="week">Week</label>
+                            <input type="number" id="week" name="week" min="1" max="52" placeholder="1" required>
+                            <div class="form-error" data-error-for="week"></div>
+                        </div>
+                        <div class="form-field">
+                            <label for="journalName">Journal name</label>
+                            <input type="text" id="journalName" name="journalName" placeholder="Building the Foundation"
+                                required>
+                            <div class="form-error" data-error-for="journalName"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" name="date" required>
+                            <div class="form-error" data-error-for="date"></div>
+                        </div>
+                        <div class="form-field">
+                            <label for="taskName">Task name</label>
+                            <input type="text" id="taskName" name="taskName" placeholder="Responsive layout and navbar"
+                                required>
+                            <div class="form-error" data-error-for="taskName"></div>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="taskDescription">Task description (min 10 words)</label>
+                        <textarea id="taskDescription" name="taskDescription" rows="4"
+                            placeholder="Describe what you did, challenges, and what you learned..."
+                            required></textarea>
+                        <div class="form-error" data-error-for="taskDescription"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label>Location (optional)</label>
+                            <button type="button" id="useGeolocation" class="btn btn-outline">Use my location</button>
+                            <div id="geoOutput" style="margin-top:0.5rem;color:var(--gray);"></div>
+                            <input type="hidden" id="geoLat" name="geoLat" />
+                            <input type="hidden" id="geoLon" name="geoLon" />
+                            <input type="hidden" id="geoAddress" name="geoAddress" />
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>Technologies used (select all that apply)</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="tech" value="HTML"> HTML</label>
+                            <label><input type="checkbox" name="tech" value="CSS"> CSS</label>
+                            <label><input type="checkbox" name="tech" value="JavaScript"> JavaScript</label>
+                        </div>
+                        <div class="form-error" data-error-for="tech"></div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Submit Entry</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- Add YouTube Video -->
+        <section>
+            <div class="journal-form video-form">
+                <h2 style="margin-bottom:1rem;">Add YouTube Video</h2>
+                <form id="youtubeForm" novalidate>
+                    <div class="input-row">
+                        <div class="input-icon">▶</div>
+                        <input type="url" id="youtubeLink" name="youtubeLink"
+                            placeholder="Paste a YouTube link (e.g. https://youtu.be/...)" required>
+                        <button type="submit" class="btn btn-primary">Add Video</button>
+                    </div>
+                    <div class="form-error" data-error-for="youtubeLink"></div>
+                    <!-- Live Preview Area -->
+                    <div id="youtubePreview" style="margin-top:1.5rem;display:none;">
+                        <h3 style="margin-bottom:0.75rem;font-size:1.1rem;">Preview:</h3>
+                        <div
+                            style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.1);">
+                            <iframe id="youtubePreviewFrame" src="" allowfullscreen
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- YouTube Videos Section -->
+        <section>
+            <div class="section-header">
+                <h2>YouTube Videos</h2>
+                <p>Add and manage your study or inspiration videos</p>
+            </div>
+            <div class="videos-grid" id="youtubeVideoGrid"></div>
+        </section>
+
+        <!-- Modal for YouTube preview -->
+        <div id="ytModal" class="modal-backdrop" style="display:none;">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Video added</h3>
+                    <button type="button" class="modal-close" aria-label="Close">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-player-wrap">
+                        <iframe id="ytModalFrame" src="" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline modal-close">Close</button>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Edit Entry Modal -->
+    <div id="editModal" class="entry-modal hidden" aria-hidden="true">
+        <div class="entry-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="editModalTitle">
+            <button type="button" class="modal-close" data-close-edit aria-label="Close edit modal">×</button>
+            <h2 id="editModalTitle">Edit Journal Entry</h2>
+            <form id="editForm" class="journal-form" novalidate>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="editWeek">Week</label>
+                        <input type="number" id="editWeek" name="week" min="1" max="52" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="editTitle">Journal name</label>
+                        <input type="text" id="editTitle" name="title" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="editDate">Date</label>
+                        <input type="date" id="editDate" name="date" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="editTaskName">Task name</label>
+                        <input type="text" id="editTaskName" name="taskName" required>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="editReflection">Task description</label>
+                    <textarea id="editReflection" name="reflection" rows="4" required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="editLocationAddress">Location</label>
+                        <input type="text" id="editLocationAddress" name="locationAddress" placeholder="City, Country">
+                    </div>
+                    <div class="form-field">
+                        <label for="editLocationLat">Latitude / Longitude</label>
+                        <div class="form-row compact">
+                            <input type="text" id="editLocationLat" placeholder="Lat">
+                            <input type="text" id="editLocationLon" placeholder="Lon">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label>Technologies used</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="editTech" value="HTML"> HTML</label>
+                        <label><input type="checkbox" name="editTech" value="CSS"> CSS</label>
+                        <label><input type="checkbox" name="editTech" value="JavaScript"> JavaScript</label>
+                        <label><input type="checkbox" name="editTech" value="Python"> Python</label>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" data-close-edit>Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Learning Journal PWA</h3>
+                <p>A progressive web application documenting my 14-week journey through creative computing and web
+                    development.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="journal.html">Journal</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="https://github.com/krishnasahnp/" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/krishna-sah/" target="_blank">LinkedIn</a>
+                <a href="mailto:kr.krishna.np@gmail.com">Email</a>
+            </div>
+            <div class="footer-section">
+                <h3>Technologies</h3>
+                <p>HTML5</p>
+                <p>CSS3</p>
+                <p>JavaScript</p>
+                <p>PWA Standards</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Learning Journal PWA. Developed By Krishna Sah.</p>
+        </div>
+    </footer>
+
+    <div class="welcome-modal-backdrop" style="display:none;">
+        <div class="welcome-modal">
+            <div class="welcome-modal-icon">
+                <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="checksvg">
+                    <circle cx="33" cy="33" r="30" stroke="#6346F1" stroke-width="6" stroke-dasharray="190"
+                        stroke-dashoffset="0">
+                        <animate attributeName="stroke-dashoffset" from="190" to="0" dur="1s" fill="freeze" />
+                    </circle>
+                    <path d="M19 36L30 47L47 23" stroke="#34d399" stroke-width="6" stroke-linecap="round"
+                        stroke-dasharray="36" stroke-dashoffset="36">
+                        <animate attributeName="stroke-dashoffset" from="36" to="0" dur="0.6s" begin="0.8s"
+                            fill="freeze" />
+                    </path>
+                </svg>
+            </div>
+            <h2>Welcome to My Journal!</h2>
+            <p style="font-size:1.08rem;margin-bottom:1.2rem;">Journals: View or add your weekly creative computing
+                reflections. Congratulations on progressing through your journey!</p>
+            <button class="welcome-modal-close">OK, Let’s Go!</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/storage.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/thirdparty.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/journal-data.js') }}"></script>
+</body>
+
+</html>
